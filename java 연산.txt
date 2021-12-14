@@ -1,0 +1,35 @@
+      int result = 1 + 2;
+      System.out.println(result);
+
+      result = result - 1;
+      System.out.println(result);
+
+      result = result * 2;
+      System.out.println(result);
+
+      result = result / 2;
+      System.out.println(result);
+
+      result = result + 8;
+      // result 의 값은 3
+      result = result % 7;
+      System.out.println(result); 
+int a = 3;
+        System.out.println(0%a);
+        System.out.println(1%a);
+        System.out.println(2%a);
+        System.out.println(3%a);
+        System.out.println(4%a);
+        System.out.println(5%a);
+        System.out.println(6%a);
+
+       int a = 10;
+        int b = 3;
+
+        float c = 10.0F;
+        float d = 3.0F;
+
+        System.out.println(a/b);
+        System.out.println(c/d);
+        System.out.println(a/d);
+    }

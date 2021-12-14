@@ -1,0 +1,31 @@
+#include <stdio.h>
+#define MAX_FIBO 40
+int values[MAX_FIBO] = { 1,1 };
+ 
+int main()
+{
+    int i = 0;
+    for (i = 1; i < MAX_FIBO; i++)
+    {        
+        printf("%5d ", Fibonacci2(i));
+        if (i % 5 == 0)
+        {
+            printf("\n");
+        }
+    }
+ 
+    return 0;
+}
+int Fibonacci2(int n)
+{
+    if (n < 1)
+    {
+        return 0;
+    }
+    if (values[n - 1])
+    {
+        return values[n - 1];
+    }
+    values[n-1] =  Fibonacci2(n - 2) + Fibonacci2(n - 1);
+    return values[n - 1];
+}

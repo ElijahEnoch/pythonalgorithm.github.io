@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+	int a;//정수형inteeger
+	double b;//실수형
+	char c;//문자형character
+	
+	printf("int : %u\n", &a);
+	printf("double : %u\n", &b);
+	printf("char : %u\n", &c);
+
+	return 0;
+}

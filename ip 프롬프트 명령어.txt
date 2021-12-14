@@ -1,0 +1,2 @@
+ipconfig - ip주소 
+nslook - 네임서버 색인

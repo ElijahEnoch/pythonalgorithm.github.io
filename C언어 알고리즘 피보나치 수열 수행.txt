@@ -1,0 +1,57 @@
+#include <stdio.h>
+#define MAX_FIBO 40
+int values[MAX_FIBO] = { 1,1 };
+int Fibonacci2(int n);
+int Fibonacci(int n);
+int cnt = 0, cnt2 = 0;
+
+#include <time.h>
+int main()
+{
+    int i = 0;
+    clock_t st, et;
+    for (i = MAX_FIBO - 5; i < MAX_FIBO; i++)
+    {
+        printf("=== test case [%d]th\n", i);
+        st = clock();
+        Fibonacci(i);
+        et = clock();
+        printf("%d\n", et - st);
+        st = clock();
+        Fibonacci2(i);
+        et = clock();
+        printf("%d\n", et - st);
+        printf("cnt:%d cnt2:%d\n", cnt, cnt2);
+    }
+    return 0;
+}
+
+
+int Fibonacci(int n)
+{
+    cnt++;
+    if (n < 1)
+    {
+        return 0;
+    }
+    if ((n == 1) || (n == 2))
+    {
+        return 1;
+    }
+    return Fibonacci(n - 2) + Fibonacci(n - 1);
+}
+
+int Fibonacci2(int n)
+{
+    cnt2++;
+    if (n < 1)
+    {
+        return 0;
+    }
+    if (values[n - 1])
+    {
+        return values[n - 1];
+    }
+    values[n - 1] = Fibonacci2(n - 2) + Fibonacci2(n - 1);
+    return values[n - 1];
+}

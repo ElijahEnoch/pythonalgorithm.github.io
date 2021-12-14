@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	int a;//정수형inteeger
+	int *pa;//pointer-변수의 메모리값 주소를 저장
+	
+	pa = &a;
+	*pa = 10;
+
+	printf("pointer a : %d\n", *pa);
+	printf("a : %d\n", a);
+
+	return 0;
+}
